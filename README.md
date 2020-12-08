@@ -1,2 +1,2 @@
 # Rock--Paper--Scissors
- First project
+ Rock, Paper, Scissors game made with Python and Tkinter
