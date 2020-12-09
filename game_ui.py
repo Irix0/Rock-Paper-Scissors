@@ -5,6 +5,20 @@ import ui_game_components as gc
 user_points = gc.Points()
 computer_points = gc.Points()
 
+game_window = Tk()
+game_window.title("Rock, Paper, Scissors")
+game_window.geometry("1280x720")
+game_window.minsize(360, 320)
+game_window.iconbitmap("iconbitmap.ico")
+game_window.config(background='#212121')
+
+global status_var
+global computer_points_var
+global user_points_var
+status_var = StringVar()
+computer_points_var = IntVar()
+user_points_var = IntVar()
+
 
 def status_change(a):
     if a == "won":
@@ -40,20 +54,6 @@ def scissors_command():
 
 
 def game_ui():
-    game_window = Tk()
-    game_window.title("Rock, Paper, Scissors")
-    game_window.geometry("1280x720")
-    game_window.minsize(360, 320)
-    game_window.iconbitmap("iconbitmap.ico")
-    game_window.config(background='#212121')
-
-    global status_var
-    global computer_points_var
-    global user_points_var
-    status_var = StringVar()
-    computer_points_var = IntVar()
-    user_points_var = IntVar()
-
     # Rock, Paper or Scissors question
     upper_frame = Frame(game_window, bg="#212121")
     question = Label(upper_frame, text="Rock, Paper or Scissors ?", font=("Segoe UI", 50), bg="#212121", fg="#d4d4d5")

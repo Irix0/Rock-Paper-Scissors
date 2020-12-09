@@ -1,4 +1,4 @@
 from distutils.core import setup
 import py2exe
 
-setup(console=['main_ui.py'])
+setup(console=['game_ui.py'])

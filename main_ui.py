@@ -1,5 +1,11 @@
 from Archives.game_components import *
+from tkinter import *
 from game_ui import *
+
+
+def start_command():
+    game_ui()
+    main_window.withdraw()
 
 
 # Create main window
@@ -18,7 +24,7 @@ main_subtitle = Label(title_frame, text="Click on Start to begin.", font=("Segoe
 main_title.pack()
 main_subtitle.pack()
 # Start button
-start_button = Button(title_frame, text="Start", font=("Segoe UI", 20), bg="#d4d4d5", fg="#212121", command=game_ui)
+start_button = Button(title_frame, text="Start", font=("Segoe UI", 20), bg="#d4d4d5", fg="#212121", command=start_command)
 start_button.pack(pady=25)
 
 title_frame.pack(expand=YES)
