@@ -1,5 +1,4 @@
-import sourcerandom
-
+from random import *
 
 
 # ROCK = 0, PAPER = 1, SCISSORS = 2
@@ -18,10 +17,8 @@ class Points:
 
 
 def random(x=1, y=150):
-    RAND_GEN = sourcerandom.SourceRandom(
-        source=sourcerandom.OnlineRandomnessSource.QRNG_ANU)  # Initialize the generator - use the same generator to take advantage of caching
-    value = RAND_GEN.randint(x, y)
-    if value < y / 3:
+    value = randint(x,y)
+    if value <= y / 3:
         return 0
     elif y / 3 < value <= (y / 3) * 2:
         return 1
